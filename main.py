@@ -1,3 +1,5 @@
 from funcAndClas import *
 
-react = getReaction()
+
+react = getReaction(text)
+print(react)

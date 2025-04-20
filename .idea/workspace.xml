@@ -5,12 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f910dda6-2900-4670-bf2e-35d999a574df" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/PythonProject2.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/PythonProject2.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/NO2_Cp.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/compounds_db.xlsx" beforeDir="false" afterPath="$PROJECT_DIR$/compounds_db.xlsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/myfoos.py" beforeDir="false" afterPath="$PROJECT_DIR$/funcAndClas.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/funcAndClas.py" beforeDir="false" afterPath="$PROJECT_DIR$/funcAndClas.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,18 +26,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN",
-    "assignee": "panchenberg"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;panchenberg&quot;
   }
-}]]></component>
-  <component name="GithubPullRequestsUISettings"><![CDATA[{
-  "selectedUrlAndAccountId": {
-    "url": "https://github.com/panchenberg/numMethInChem.git",
-    "accountId": "76f5bf31-1496-4c79-a4b4-587e9ffa20fb"
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/panchenberg/numMethInChem.git&quot;,
+    &quot;accountId&quot;: &quot;76f5bf31-1496-4c79-a4b4-587e9ffa20fb&quot;
   }
-}]]></component>
+}</component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="QODANA_PROBLEMS_VIEW_TAB" />
   </component>
@@ -53,8 +52,10 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "Python.main.executor": "Run",
     "Python.scratch.executor": "Run",
-    "Python.test.executor": "Debug",
+    "Python.sem9.executor": "Run",
+    "Python.test.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "git-widget-placeholder": "master",
@@ -68,18 +69,6 @@
     ]
   }
 }]]></component>
-  <component name="QodanaHighlightedReportService">
-    <option name="localRunNotPublishedPersistedInfo">
-      <LocalReportPersistedInfo>
-        <option name="path" value="C:\Users\User\AppData\Local\Temp\qodana_output\qodana.sarif.json" />
-        <option name="reportGuid" value="f94e072b-5ef7-4d5c-996e-7dcbcab6c0e8" />
-        <option name="reportName" value="PythonProject2/qodana/2025-04-02" />
-      </LocalReportPersistedInfo>
-    </option>
-  </component>
-  <component name="QodanaIsSelectedPersistenceService">
-    <option name="selectedOrLoading" value="true" />
-  </component>
   <component name="QodanaReportsService">
     <option name="descriptions">
       <ReportDescription localRun="true" path="C:\Users\User\AppData\Local\Temp\qodana_output\qodana.sarif.json" reportGuid="f94e072b-5ef7-4d5c-996e-7dcbcab6c0e8" reportId="PythonProject2/qodana/2025-04-02" />
@@ -90,6 +79,7 @@
       <recent name="C:\Users\User\PycharmProjects\PythonProject2" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\User\PycharmProjects\numMethInChem" />
       <recent name="C:\Users\User\PycharmProjects\PythonProject2" />
     </key>
   </component>

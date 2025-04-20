@@ -1,6 +1,5 @@
 import numpy as np
 import openpyxl
-import sys
 
 class Compound:
     def __init__(self, s_formula, s_state):
@@ -19,6 +18,11 @@ class Compound:
 
             ## сравнение составов
             isOk = True
+
+            if set(cmp_i.keys()) != set(self.composition.keys()):
+                isOk = False
+                continue
+            
             for element in self.composition:
                 if not element in cmp_i:
                     isOk = False
@@ -56,7 +60,6 @@ class Compound:
                 ws["J" + str(ws.max_row)] = float(input("please input the lower limit of the Cp: "))
                 ws["K" + str(ws.max_row)] = float(input("please input the higher limit of the Cp: "))
                 f_db.save("compounds_db.xlsx")
-                Compound(self.s_formula, self.s_state)
 
         self.name = ws["B" + str(i_index)].value
         self.dfH0_298 = ws["D" + str(i)].value
@@ -78,7 +81,6 @@ class Compound:
         self.cp0_298 = self.calc_Cp(298.15)
 
     def __str__(self):
-        # full_obj = self.name + " " + self.s_formula + "(" + self.s_state + ")" + "\n" "M = " + str(self.M) + "\n" + "Cp = " + str(self.cp0_298)
         return self.name + " " + self.s_formula + "(" + self.s_state + ")" + "\n" "M = " + str(
             self.M) + "\n" + "Cp = " + str(self.cp0_298)
 
@@ -116,10 +118,10 @@ class Reaction:
         for i in range(len(self.parts)):
             if i + 1 < len(self.parts):
                 if self.coeffs[i] < 0 and self.coeffs[i + 1] > 0:
-                    s_reaction += str(self.coeffs[i]) + "*" + self.parts[i].s_formula + "(" + self.parts[
+                    s_reaction += str(abs(self.coeffs[i])) + "*" + self.parts[i].s_formula + "(" + self.parts[
                         i].s_state + ")" + " = "
                 else:
-                    s_reaction += str(self.coeffs[i]) + "*" + self.parts[i].s_formula + "(" + self.parts[
+                    s_reaction += str(abs(self.coeffs[i])) + "*" + self.parts[i].s_formula + "(" + self.parts[
                         i].s_state + ")" + " + "
             else:
                 s_reaction += str(self.coeffs[i]) + "*" + self.parts[i].s_formula + "(" + self.parts[i].s_state + ")"
@@ -225,9 +227,9 @@ def integrate_trapezoid(x, y):
     return dsum
 
 # %%
-def getReaction():
-    text = "1*H2(g) + 1*O2(g) = 1/2*H2O(l)"
-    text = input("please insert reaction like exp: \n 1*A(g) + 2*B(g) = 3*C(g) + 4*D(g)")
+def getReaction(text=""):
+    if text == "":
+        text = input("please insert reaction like exp: \n 1*A(g) + 2*B(g) = 3*C(g) + 4*D(g)\n")
     return Reaction(textToReaction(text)[0], textToReaction(text)[1], textToReaction(text)[2])
 
 
@@ -276,9 +278,10 @@ def textToReaction(text):
     return parts, states, coeffs
 
 
-def getCompound():
-    formula = input("Напишите формулу: ")
-    state = input("введите фазу: ")
+def getCompound(formula="",state=""):
+    if formula == "" and state == "":
+        formula = input("Напишите формулу: ")
+        state = input("введите фазу: ")
     comp = Compound(formula, state)
     return comp
 
